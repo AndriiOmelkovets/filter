@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <title></title>
+  <meta charset="utf-8" />
+  <link href="css/style.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+</head>
+<body ng-app="app" ng-controller="myCtrl as vm">
+  <div class="wrap">
+    <header class="header">
+      <div class="wrap-content">
+        <div class="logo">
+          <a href="#">
+            <img src="img/logo.png"/>
+          </a>
+        </div>
+      </div>
+    </header>
+    <section class="section">
+      <div class="wrap-content">
+        <div class="wrap-search-input">
+          <input type="text" value="" class="search-input" ng-model="searchPattern"/>
+        </div>
+          <div class="find-content">
+              <ul>
+                  <li ng-repeat="player in vm.players | myFilter:searchPattern">
+                      <h4 class="description-find-content">
+                          {{player.name}}
+                      </h4>
+                      <p>
+                        position: {{player.position}}
+                      </p>
+                      <p>
+                          nationality: {{player.nationality}}
+                      </p>
+                  </li>
+              </ul>
+          </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="wrap-content">
+        <ul class="info-about-our">
+          <li>
+            <a href="#">Help</a>
+          </li>
+          <li>
+            <a href="#">Our team</a>
+          </li>
+          <li>
+            <a href="#">Contact us</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+</body>
+<script src="js/app.js"></script>
+<script src="js/controller/myCtrl.js"></script>
+</html>

@@ -1,0 +1,125 @@
+﻿body, h4, p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+input:focus {
+    outline: none;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-width: 1000px;
+}
+
+.header, .footer {
+    flex-shrink: 0;
+}
+
+.section {
+    flex: 1 0 auto;
+    background-color: #ffffff;
+}
+
+    .header .wrap-content, .section .wrap-content, .footer .wrap-content {
+        width: 1000px;
+        margin: auto;
+        height: 100%;
+    }
+
+/*header*/
+
+.header {
+    height: 62px;
+    background: #424653;
+}
+
+    .header .logo {
+        line-height: 62px;
+        display: inline-block;
+        margin-left: 30px;
+    }
+
+        .header .logo img {
+            vertical-align: middle;
+        }
+
+/*section*/
+
+.section .wrap-search-input {
+    text-align: center;
+    margin: 46px 0 44px;
+}
+
+    .section .wrap-search-input input {
+        width: 450px;
+        height: 28px;
+        box-sizing: border-box;
+        border: 2px solid #5B99A5;
+        border-radius: 5px;
+        background: #F2F2F2;
+        padding: 0 10px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+    }
+
+.section .find-content {
+    width: 850px;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(90, 94, 108);
+}
+
+    .section .find-content li {
+        margin-bottom: 20px;
+    }
+
+    .section .find-content h4 {
+        font-size: 16px;
+    }
+
+    .section .find-content p {
+        font-size: 14px;
+    }
+
+
+/*footer*/
+
+.footer {
+    height: 78px;
+    background: #424653;
+}
+
+    .footer .info-about-our {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .footer .info-about-our li {
+            margin-right: 90px;
+        }
+
+            .footer .info-about-our li:last-child {
+                margin: 0;
+            }
+
+
+    .footer a:link, .footer a:active, .footer a:visited {
+        font-size: 14px;
+        font-family: 'Open Sans', sans-serif;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+    }
