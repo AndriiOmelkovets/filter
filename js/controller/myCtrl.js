@@ -13,7 +13,7 @@
         vm.players = [];
 
         function getJson() {
-            $http({ method: 'GET', url: '/players.json' })
+            $http({ method: 'GET', url: '/filter/data/players.json' })
          .then(function (response) {
              vm.players = response.data;
          });
